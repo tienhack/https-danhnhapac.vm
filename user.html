@@ -8,6 +8,16 @@
 <body>
     <h1>Welcome to Your User Page</h1>
     <p>Your information has been submitted!</p>
-    <a href="admin.html">Go to Admin Page</a>
+    <a href="admin.html" id="admin-link">Go to Admin Page</a>
+    <script>
+        // Kiểm tra nếu có thông tin người dùng
+        const email = localStorage.getItem('userEmail');
+
+        // Nếu không có email, ẩn liên kết đến trang quản lý
+        if (!email) {
+            document.getElementById('admin-link').style.display = 'none';
+            document.body.innerHTML += '<p>Please log in to access admin page.</p>';
+        }
+    </script>
 </body>
 </html>

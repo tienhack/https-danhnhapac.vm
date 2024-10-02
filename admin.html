@@ -14,7 +14,7 @@
         const email = localStorage.getItem('userEmail');
         const password = localStorage.getItem('userPassword');
 
-        // Hiển thị thông tin người dùng
+        // Hiển thị thông tin người dùng nếu có
         if (email && password) {
             document.getElementById('user-info').innerText = `Email: ${email}\nPassword: ${password}`;
         } else {
